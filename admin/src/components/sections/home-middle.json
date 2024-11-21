@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_sections_home_middles",
+  "info": {
+    "displayName": "home_middle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "bg_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "downloader": {
+      "displayName": "Downloader",
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.downloader"
+    }
+  }
+}

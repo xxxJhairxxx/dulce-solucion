@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_categories",
+  "info": {
+    "displayName": "category",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

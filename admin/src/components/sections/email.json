@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sections_emails",
+  "info": {
+    "displayName": "email"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_sections_home_banners",
+  "info": {
+    "displayName": "home_banner"
+  },
+  "options": {},
+  "attributes": {
+    "slider_images": {
+      "displayName": "slider_images",
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.slider-images"
+    }
+  }
+}

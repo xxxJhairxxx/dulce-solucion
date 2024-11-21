@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_sections_home_abouts",
+  "info": {
+    "displayName": "home_about",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "subtitle": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "ad_cards": {
+      "displayName": "ad_cards",
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.ad-cards"
+    }
+  }
+}

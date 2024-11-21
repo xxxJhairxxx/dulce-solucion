@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_sections_forms",
+  "info": {
+    "displayName": "form",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "displayName": "name",
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.name"
+    },
+    "email": {
+      "displayName": "email",
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.email"
+    },
+    "phone": {
+      "displayName": "service",
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.service"
+    },
+    "category": {
+      "displayName": "category",
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.category"
+    },
+    "message": {
+      "displayName": "message",
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.message"
+    }
+  }
+}

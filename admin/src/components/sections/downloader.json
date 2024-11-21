@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_downloaders",
+  "info": {
+    "displayName": "Downloader"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "document": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_home_maps",
+  "info": {
+    "displayName": "home_map",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "subtitle": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "map_url": {
+      "type": "text"
+    }
+  }
+}

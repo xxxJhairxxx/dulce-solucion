@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_home_products",
+  "info": {
+    "displayName": "home_products",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "products_card": {
+      "displayName": "products_card",
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.products-card"
+    }
+  }
+}

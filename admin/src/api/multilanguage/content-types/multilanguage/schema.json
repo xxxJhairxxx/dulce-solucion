@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "multilanguages",
+  "info": {
+    "singularName": "multilanguage",
+    "pluralName": "multilanguages",
+    "displayName": "Multilanguage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "lbl_see_products": {
+      "type": "string"
+    },
+    "lbl_contact_us": {
+      "type": "string"
+    },
+    "lbl_rights": {
+      "type": "string"
+    },
+    "menu": {
+      "displayName": "menu",
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.menu"
+    },
+    "lbl_send": {
+      "type": "string"
+    },
+    "lbl_list_products": {
+      "type": "string"
+    },
+    "lbl_year": {
+      "type": "string"
+    }
+  }
+}

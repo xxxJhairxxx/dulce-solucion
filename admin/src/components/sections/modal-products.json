@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_modal_products",
+  "info": {
+    "displayName": "modal_products",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "list_title": {
+      "type": "string"
+    },
+    "list_products": {
+      "type": "richtext"
+    }
+  }
+}

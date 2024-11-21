@@ -1,0 +1,56 @@
+{
+  "collectionName": "components_sections_products_cards",
+  "info": {
+    "displayName": "products_card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "modal_title": {
+      "type": "string"
+    },
+    "modal_list": {
+      "type": "richtext"
+    },
+    "activar_lista": {
+      "type": "boolean"
+    },
+    "productIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "modal_color": {
+      "type": "enumeration",
+      "enum": [
+        "rosado",
+        "amarillo",
+        "morado",
+        "verde"
+      ]
+    }
+  }
+}
