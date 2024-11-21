@@ -1,0 +1,105 @@
+.homeBanner {
+  @apply w-full h-[70rem] max-h-[100vh] overflow-hidden;
+
+  &-img {
+    @apply h-[70rem];
+    img {
+      @apply h-[70rem];
+    }
+  }
+
+  &__swiperArea {
+    &__thumb {
+      @apply overflow-hidden h-full;
+      img {
+        @apply h-full w-full object-cover;
+      }
+    }
+  }
+
+  .swiper-slider {
+    @apply relative h-full;
+  }
+
+  .homeBanner-pagination {
+    @apply absolute flex justify-center mx-auto mb-20;
+    z-index: 10;
+    gap: 0.5rem;
+    .swiper-pagination-bullet {
+      @apply cursor-pointer bg-white opacity-70;
+      width: 1rem;
+      height: 1rem;
+
+      box-shadow: 9px 5px 71px -24px rgba(0, 0, 0, 0.75);
+    }
+    .swiper-pagination-bullet-active {
+      @apply bg-white opacity-100;
+    }
+  }
+
+  @screen tablet {
+    @apply w-full h-[37vh]   overflow-visible;
+    &-img {
+      @apply h-[37vh];
+      img {
+        @apply h-[37vh];
+      }
+    }
+  }
+  @screen tabletxl {
+    @apply w-full h-[67vh]   overflow-visible;
+    &-img {
+      @apply h-[67vh];
+      img {
+        @apply h-[67vh];
+      }
+    }
+  }
+  @screen laptop {
+    @apply w-full h-[91vh]  min-h-[80vh] overflow-visible;
+
+    &__swiperArea {
+      &__thumb {
+        img {
+          @apply h-full w-full;
+        }
+      }
+    }
+
+    &-img {
+      @apply h-[91vh];
+      img {
+        @apply h-[91vh];
+      }
+    }
+
+    .swiper-slider {
+      @apply relative right-0;
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+      @apply max-w-[2rem] absolute;
+    }
+    .homeBanner-pagination {
+      @apply flex flex-col  absolute w-fit h-fit m-0 ml-auto;
+      z-index: 10;
+      right: calc(5rem * var(--scale));
+      top: 44%;
+      gap: calc(1rem * var(--scale));
+      transform: translateY(-50%);
+
+      .swiper-pagination-bullet {
+        @apply text-[4rem] cursor-pointer bg-white opacity-70;
+        width: calc(1.5rem * var(--scale));
+        height: calc(1.5rem * var(--scale));
+        box-shadow: 9px 5px 71px -24px rgba(0, 0, 0, 0.75);
+      }
+      .swiper-pagination-bullet-active {
+        @apply bg-white opacity-100;
+      }
+    }
+  }
+}

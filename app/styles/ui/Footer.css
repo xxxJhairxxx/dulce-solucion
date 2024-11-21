@@ -1,0 +1,70 @@
+.footer {
+  @apply bg-dark-200 text-[1.4rem] font-[400] text-white;
+
+  &__list {
+    @apply font-primary pt-10 pb-8 px-[3.5rem];
+    &__li {
+      @apply my-4 pl-1 flex flex-col font-primary;
+      &-title {
+        @apply text-primary;
+      }
+      &-enlace {
+        @apply font-primary text-[1.37rem] text-white font-[200];
+      }
+    }
+  }
+
+  &__copyright {
+    @apply w-full py-[2rem] text-center border-t border-white;
+  }
+
+  &__icons {
+    .item-socials {
+      @apply text-[1.9rem] mt-2 mr-1;
+    }
+  }
+
+  @screen laptop {
+    font-size: calc(1.72rem * var(--scale));
+    padding-top: calc(2rem * var(--scale));
+    &__list {
+      @apply flex justify-around;
+      padding: calc(6rem * var(--scale)) calc(28rem * var(--scale));
+      padding-bottom: calc(5rem * var(--scale));
+
+      &__li {
+        @apply my-0 pl-0 w-fit;
+
+        gap: calc(1rem * var(--scale));
+
+        &-title {
+          @apply text-primary font-[500];
+        }
+        &-enlace {
+          @apply font-[300];
+          font-size: calc(1.72rem * var(--scale));
+        }
+
+        .address {
+          width: calc(24.5rem * var(--scale));
+        }
+        .schedule {
+          width: calc(16.6rem * var(--scale));
+        }
+      }
+    }
+
+    &__copyright {
+      @apply w-full text-center border-t border-white font-[300];
+      padding-bottom: calc(3.5rem * var(--scale));
+      padding-top: calc(2.5rem * var(--scale));
+      font-size: calc(1.5rem * var(--scale));
+    }
+
+    &__icons {
+      .item-socials {
+        font-size: calc(2.3rem * var(--scale));
+      }
+    }
+  }
+}

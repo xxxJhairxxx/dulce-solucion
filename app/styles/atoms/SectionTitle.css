@@ -1,0 +1,52 @@
+.sectionTitle {
+  @apply text-center relative w-[32.7] leading-[3rem];
+
+  &-subtitle {
+    @apply font-primary lowercase relative text-primary font-[600];
+
+    &::first-letter {
+      @apply uppercase;
+    }
+  }
+
+  &-title {
+    @apply text-success uppercase text-[2.5rem] font-[800] font-primary;
+    &::before {
+      position: absolute;
+      background-image: url("/images/line.png");
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      content: "";
+      width: 5rem;
+      bottom: -2rem;
+      height: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  @screen tabletxl {
+    &-title {
+      @apply w-[50%] mx-auto;
+    }
+  }
+
+  @screen laptop {
+    line-height: calc(3.5rem * var(--scale));
+    &-subtitle {
+      @apply font-primary;
+      font-size: calc(2rem * var(--scale));
+    }
+
+    &-title {
+      @apply font-[800] mx-auto w-full;
+      font-size: calc(3.6rem * var(--scale));
+      line-height: calc(4.5rem * var(--scale));
+
+      &::before {
+        bottom: calc(-2.5rem * var(--scale));
+        width: calc(6.7rem * var(--scale));
+      }
+    }
+  }
+}

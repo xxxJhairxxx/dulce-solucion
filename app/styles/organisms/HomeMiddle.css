@@ -1,0 +1,126 @@
+.homeMiddle {
+  @apply h-[29.7rem] relative  flex items-center;
+  background-size: cover;
+  background-position: center;
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: #800452;
+    width: 100%;
+    height: 100%;
+    opacity: 80%;
+    z-index: 2;
+    mix-blend-mode: multiply;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #800452;
+    width: 100%;
+    height: 100%;
+    opacity: 30%;
+    z-index: 4;
+    mix-blend-mode: screen;
+  }
+
+  &__ctn {
+    @apply text-white h-[24.7rem] flex flex-col px-[3.2rem] justify-center text-center items-center;
+    border-top: 0.35rem dashed transparent;
+    border-bottom: 0.35rem dashed transparent;
+    border-image: url("/images/lineas.png") 6 repeat;
+    padding-bottom: 1.4rem;
+    z-index: 10;
+    &__text {
+      @apply font-primary;
+
+      &-title {
+        @apply font-[800] uppercase;
+        font-size: 1.919rem;
+      }
+
+      &-subtitle {
+        @apply lowercase mt-[0.6rem] mb-[1.2rem];
+        font-size: 1.5;
+
+        &::first-letter {
+          @apply uppercase;
+        }
+      }
+    }
+    &-btn {
+      @apply bg-white  text-primary hover:bg-primary hover:text-white;
+    }
+  }
+
+  @screen tabletxl {
+    @apply px-0;
+    height: calc(36.8rem * var(--scale));
+
+    &__ctn {
+      @apply w-full;
+      max-width: 100%;
+      height: calc(29.7rem * var(--scale));
+      padding-top: calc(3.6rem * var(--scale));
+      margin: 0;
+
+      &__text {
+        width: calc(84rem * var(--scale));
+        &-title {
+          font-size: 2.8rem;
+          font-weigth: 800;
+          @apply leading-tight;
+        }
+        &-subtitle {
+          @apply font-[400];
+          font-size: calc(2.13rem * var(--scale));
+          margin: 0;
+          margin-bottom: calc(1rem * var(--scale));
+        }
+      }
+
+      &-btn {
+        @apply bg-white  text-primary hover:bg-primary hover:text-white;
+        font-weigth: 800;
+        padding-bottom: calc(1rem * var(--scale));
+      }
+    }
+  }
+
+  @screen laptop {
+    @apply px-0;
+    height: calc(36.8rem * var(--scale));
+
+    &__ctn {
+      @apply w-full;
+      max-width: 100%;
+      height: calc(29.7rem * var(--scale));
+      padding-top: calc(3.6rem * var(--scale));
+      margin: 0;
+      border-image: url("/images/lineas.png") 4 repeat;
+      border-top: calc(0.4rem * var(--scale)) dashed transparent;
+      border-bottom: calc(0.4rem * var(--scale)) dashed transparent;
+
+      &__text {
+        width: calc(84rem * var(--scale));
+        &-title {
+          font-size: calc(3.6rem * var(--scale));
+          font-weigth: 800;
+          @apply leading-tight;
+        }
+        &-subtitle {
+          @apply font-[400];
+          font-size: calc(2.13rem * var(--scale));
+          margin: 0;
+          margin-bottom: calc(1rem * var(--scale));
+        }
+      }
+
+      &-btn {
+        @apply bg-white  text-primary hover:bg-primary hover:text-white;
+        font-weigth: 800;
+        padding-bottom: calc(1rem * var(--scale));
+      }
+    }
+  }
+}

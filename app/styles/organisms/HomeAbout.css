@@ -1,0 +1,80 @@
+.homeAbout {
+  @apply py-20;
+
+  background-color: rgba(250, 250, 250, 0.98);
+
+  &__ctn {
+    &-ads {
+      @apply flex flex-wrap justify-around gap-8;
+    }
+
+    &__main {
+      padding-top: 4rem;
+      &-text {
+        &-title {
+          @apply w-[85%] mx-auto;
+        }
+        &-parrafo {
+          @apply text-center font-primary font-[300] mx-auto text-[1.5rem] text-gris-200 leading-9 mt-12 mb-10;
+          width: 85%;
+          strong {
+            @apply font-bold;
+          }
+        }
+      }
+
+      &-thumb {
+        @apply rounded-lg overflow-hidden mx-auto;
+        width: 85%;
+        img {
+          @apply w-full;
+        }
+      }
+    }
+  }
+
+  @screen laptop {
+    padding-top: calc(10rem * var(--scale));
+    padding-bottom: calc(1rem * var(--scale));
+    background-image: url("/images/bg-about.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+
+    &__ctn {
+      &-ads {
+        @apply flex flex-wrap justify-between gap-8;
+      }
+
+      &__main {
+        display: flex;
+        align-items: center;
+        margin: auto;
+        padding-top: calc(11rem * var(--scale));
+        padding-bottom: calc(6rem * var(--scale));
+        gap: calc(0 * var(--scale));
+        &-text {
+          @apply w-[54%] mx-0;
+          &-title {
+            @apply mx-0 text-left;
+
+            h2::before {
+              left: calc(3.5rem * var(--scale));
+            }
+          }
+          &-parrafo {
+            @apply text-left leading-9 w-full;
+            line-height: 150%;
+            @apply w-[89.05%];
+            font-size: calc(1.9rem * var(--scale));
+            margin: calc(4rem * var(--scale)) 0;
+          }
+        }
+
+        &-thumb {
+          @apply w-[52%];
+        }
+      }
+    }
+  }
+}

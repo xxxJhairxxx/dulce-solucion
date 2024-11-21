@@ -1,0 +1,28 @@
+.homeMap {
+  @apply pt-16;
+  width: 100%;
+
+  &-title {
+    @apply mb-16 w-[90%] mx-auto;
+  }
+
+  &__map {
+    @apply w-full h-[28.6rem];
+
+    iframe {
+      @apply w-full h-full;
+    }
+  }
+
+  @screen laptop {
+    padding-top: calc(10rem * var(--scale));
+
+    &-title {
+      width: calc(70rem * var(--scale));
+      margin-bottom: calc(6.6rem * var(--scale));
+    }
+    &__map {
+      height: calc(55.6rem * var(--scale));
+    }
+  }
+}

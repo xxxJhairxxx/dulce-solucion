@@ -1,0 +1,106 @@
+.contact {
+  @apply relative  flex items-center;
+
+  background-image: url("/images/bg-contact.png");
+  background-size: cover;
+  background-repeat: repeat-y;
+
+  &__ctn {
+    @apply bg-white text-gris-200 py-[4.5rem] px-[3.5rem];
+    z-index: 20;
+    &__title {
+      @apply text-start mb-10  font-[600] p-0;
+
+      h2 {
+        @apply text-[1.7rem] leading-[3rem];
+      }
+      h1 {
+        @apply text-[2.5rem] lowercase;
+        &:first-letter {
+          @apply uppercase;
+        }
+        &::before {
+          left: 0;
+          transform: translateX(0);
+        }
+      }
+    }
+    &__description {
+      @apply mx-auto mt-16 mb-8 text-gris-200 font-secundary font-[400] text-[1.5rem] leading-[160%];
+    }
+  }
+
+  &__map {
+    @apply hidden;
+  }
+
+  @screen tabletxl {
+    &__ctn {
+      @apply bg-white text-gris-200 py-[4.5rem] px-[3.5rem];
+      z-index: 20;
+      &__title {
+        @apply text-start mb-10  font-[600] p-0 m-0;
+
+        h2 {
+          @apply text-[1.7rem] leading-[3rem];
+        }
+        h1 {
+          @apply text-[2.5rem] lowercase w-fit m-0;
+          &:first-letter {
+            @apply uppercase;
+          }
+          &::before {
+            left: 0;
+            transform: translateX(0);
+          }
+        }
+      }
+      &__description {
+        @apply mx-auto mt-16 mb-8 text-gris-200 font-secundary font-[400] text-[1.5rem] leading-[160%];
+      }
+    }
+  }
+
+  @screen laptop {
+    @apply flex items-center justify-center mx-0;
+    gap: calc(5rem * var(--scale));
+    padding-top: calc(7rem * var(--scale));
+    padding-bottom: calc(11rem * var(--scale));
+    &__ctn {
+      @apply bg-white text-gris-200 rounded-[2.5rem] border border-gris-100;
+      padding: calc(5rem * var(--scale)) calc(5.2rem * var(--scale));
+      padding-bottom: calc(3rem * var(--scale));
+      min-height: 61rem;
+      width: calc(78rem * var(--scale));
+      z-index: 100;
+      &__title {
+        @apply text-left w-full;
+        margin-bottom: calc(4rem * var(--scale));
+        h2 {
+          @apply text-primary font-[600] font-primary;
+          font-size: calc(2rem * var(--scale));
+        }
+        h1 {
+          @apply font-[700];
+          font-size: calc(4rem * var(--scale));
+        }
+      }
+
+      &__description {
+        @apply w-full;
+        font-size: calc(1.9rem * var(--scale));
+      }
+    }
+
+    &__map {
+      @apply w-[32%] rounded-[2.5rem] overflow-hidden block;
+      height: calc(71rem * var(--scale));
+      min-height: 61rem;
+      max-width: 57rem;
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

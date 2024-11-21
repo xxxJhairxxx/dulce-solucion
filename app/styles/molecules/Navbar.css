@@ -1,0 +1,173 @@
+.nav-btn {
+  @apply hidden;
+  @screen laptop {
+    display: block;
+    margin-right: calc(1.2rem * var(--scale));
+  }
+}
+.Navbar {
+  z-index: 2;
+  padding-top: 8rem;
+  padding-bottom: 2rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+  transform: translateY(-101%);
+  transition: transform 0.3s ease;
+  @apply fixed top-0 right-0 left-0 bg-primary;
+
+  @media screen(laptop) {
+    @apply static inset-auto p-[0] transform-none rounded-none text-success  w-full h-full;
+  }
+
+  &.isActive {
+    transform: translateY(0);
+  }
+
+  &-container {
+    margin-right: 6.3rem;
+    @apply flex justify-between ml-[2.7rem] text-success;
+  }
+  &-Logo {
+    @apply w-[9.5rem] h-[6rem] absolute top-[2rem] left-[2rem];
+    @screen laptop {
+      @apply hidden;
+    }
+  }
+  &-ctn {
+    @media screen(laptop) {
+      @apply relative flex items-center h-full text-success bg-white;
+      &::after {
+        content: "";
+        background-image: url("/images/bg-info2.png");
+        background-size: calc(42rem * var(--scale));
+        background-position: bottom;
+        height: calc(10rem * var(--scale));
+        width: calc(42rem * var(--scale));
+        top: calc(-1.2rem * var(--scale));
+        position: absolute;
+        left: 49%;
+        transform: translateX(-50%);
+        z-index: 10;
+      }
+    }
+  }
+
+  .socials {
+    @apply flex gap-[1rem] absolute justify-center items-start;
+    right: 6rem;
+    top: 2rem;
+    @media screen(laptop) {
+      @apply hidden;
+    }
+    &.isActive {
+      z-index: 10;
+      top: 2rem;
+      .switch-lang__selected {
+        @apply bg-white text-primary;
+      }
+      .socials__link {
+        @apply text-white text-[2.75rem];
+      }
+    }
+  }
+  .socials__link {
+    @apply text-[2.75rem] text-white;
+    transition: all 0.5s ease;
+    @screen laptop {
+      @apply hidden;
+    }
+  }
+
+  &-ul {
+    margin-top: 2rem;
+    font-size: 1.7rem;
+    @apply flex flex-col;
+
+    @media screen(laptop) {
+      @apply text-success mx-auto font-primary font-bold flex-row items-center justify-center mt-0;
+      font-size: calc(1.8rem * var(--scale));
+      gap: calc(4.5rem * var(--scale));
+      width: calc(80rem * var(--scale));
+      z-index: 20;
+      .Navbar-li {
+        @apply !font-primary font-[600];
+        font-size: calc(1.8rem * var(--scale));
+      }
+      .Navbar-li:nth-child(2) {
+        @apply mr-auto;
+      }
+    }
+  }
+
+  .Navbar-li {
+    border-top: 1px solid hsla(0, 0%, 100%, 0.2);
+    padding: 0.4rem 0;
+    transition: color 0.5s ease;
+    @apply p-12 relative cursor-pointer block font-primary;
+    position: relative;
+    text-decoration: none;
+    color: #ffff;
+    font-weight: 300;
+
+    @screen laptop {
+      @apply text-success font-[600] font-primary;
+    }
+    &.isActive {
+      @apply font-[600];
+
+      @media screen(laptop) {
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+    i {
+      @apply hidden;
+    }
+    span {
+      @apply hidden;
+    }
+    @media screen(laptop) {
+      @apply border-none p-0 relative text-success;
+      &:hover,
+      &.isActive:first-child {
+        &::after {
+          opacity: 1;
+        }
+      }
+      &::after {
+        content: "\2022";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 2.5rem;
+        left: 0px;
+        width: 100%;
+        font-size: 3rem;
+        transform: scaleX(0);
+        transition: transform 0.25s;
+      }
+      &::before {
+        top: 3px;
+        transform-origin: left;
+      }
+      &::after {
+        bottom: calc(-1.5rem * var(--scale));
+        transform-origin: left;
+      }
+      &:hover::before,
+      &:hover::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+.hide-desktop {
+  @screen laptop {
+    display: none;
+  }
+}
+/* 
+.isActivess {
+   @apply bg-black;
+} */

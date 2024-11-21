@@ -1,0 +1,14 @@
+.enlace {
+  @apply rounded-[10rem] bg-primary font-[500] px-[2.5rem] py-[0.87rem]  cursor-pointer justify-center text-white;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  text-transform: capitalize;
+
+  &:hover {
+    @apply text-white bg-success;
+  }
+  @screen laptop {
+    @apply w-fit;
+    font-size: calc(1.9rem * var(--scale));
+  }
+}

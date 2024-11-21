@@ -1,0 +1,44 @@
+.homeProducts {
+  @apply py-8;
+
+  &-ctn {
+    @apply w-full py-12 flex flex-wrap mt-5;
+
+    row-gap: 3rem;
+  }
+
+  @screen tablet {
+    &-ctn {
+      @apply justify-center;
+    }
+    & .productsCard:nth-child(even) {
+      @apply flex-row-reverse;
+      .productsCard__thumb {
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
+  }
+
+  @screen laptop {
+    background-image: url("/images/bg-products.png");
+    background-size: cover;
+    padding-top: calc(9rem * var(--scale));
+    padding-bottom: calc(3rem * var(--scale));
+    &-ctn {
+      padding-top: calc(7rem * var(--scale));
+      padding-bottom: calc(7rem * var(--scale));
+      gap: calc(3.3rem * var(--scale));
+      max-width: calc(125rem * var(--scale));
+
+      /*REVERSE IMPAR*/
+      & .productsCard:nth-child(even) {
+        @apply flex-row-reverse;
+        .productsCard__thumb {
+          margin-left: 0;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+}

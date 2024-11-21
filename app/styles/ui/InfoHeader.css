@@ -1,0 +1,36 @@
+.infoHeader {
+  @apply hidden;
+  @screen laptop {
+    @apply bg-[#ff408d] font-primary flex items-center overflow-visible;
+    z-index: 700;
+    font-size: calc(1.49rem * var(--scale));
+    height: calc(4.5rem * var(--scale));
+    &-container {
+      @apply grid grid-cols-2 place-content-between text-white font-[300];
+
+      &-info,
+      &-info2 {
+        @apply flex gap-12;
+
+        & li > i {
+          margin-right: calc(0.8rem * var(--scale));
+          font-size: calc(1.75rem * var(--scale));
+        }
+        & li > a > i {
+          margin-right: calc(0.8rem * var(--scale));
+          font-size: calc(1.7rem * var(--scale));
+        }
+
+        li {
+          @apply flex items-center;
+          a {
+            @apply flex items-center;
+          }
+        }
+      }
+      &-info2 {
+        @apply justify-end;
+      }
+    }
+  }
+}

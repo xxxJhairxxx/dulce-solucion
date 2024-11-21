@@ -1,0 +1,90 @@
+.adCard {
+  @apply relative font-primary text-center bg-blend-multiply rounded-xl flex flex-wrap gap-5 justify-center;
+  padding: 4rem 3rem;
+  width: 33rem;
+  height: 33.7rem;
+
+  &__title {
+    @apply font-[800] text-[2.22rem] leading-10;
+  }
+  &__text {
+    @apply font-[600] text-[1.3rem];
+  }
+
+  /*background-image: url("/images/bg-adcard.png");*/
+
+  @screen laptop {
+    @apply rounded-3xl gap-5 justify-start;
+    padding: calc(7rem * var(--scale)) calc(4rem * var(--scale));
+    padding-bottom: calc(4rem * var(--scale));
+    height: calc(53.9rem * var(--scale));
+
+    &__title {
+      @apply text-start;
+      font-size: calc(3.6rem * var(--scale));
+      line-height: calc(4rem * var(--scale));
+    }
+    &__text {
+      font-size: calc(1.85rem * var(--scale));
+    }
+  }
+}
+
+.ventas {
+  background-image: url("/images/bg-ad-1.png");
+
+  .enlace {
+    @apply flex items-center bg-dark-200 hover:bg-success hover:text-white text-warning cursor-pointer;
+  }
+  @screen laptop {
+    width: calc(50.75rem * var(--scale));
+  }
+}
+
+.pinatas {
+  @apply bg-primary text-white h-[47rem] bg-blend-lighten;
+  background-image: url("/images/bg-ad-2.png");
+  background-size: cover;
+  .adCard__text {
+    @apply font-[500] text-left;
+    width: calc(45.4rem * var(--scale));
+  }
+  .enlace {
+    @apply flex items-center bg-white hover:bg-success text-primary hover:text-white cursor-pointer;
+    padding: calc(1.1rem * var(--scale)) calc(2.5rem * var(--scale));
+    margin-top: calc(0.7rem * var(--scale));
+  }
+  img {
+    width: calc(22.4rem * var(--scale));
+  }
+
+  @screen tabletxl {
+    @apply relative flex-col justify-start items-start;
+    width: 50rem;
+    height: 33.7rem;
+    .adCard__text {
+      @apply font-[500] text-left;
+      width: 30rem;
+    }
+    img {
+      @apply absolute right-10 -bottom-10;
+
+      width: 30rem;
+      right: 2rem;
+    }
+  }
+
+  @screen laptop {
+    @apply relative flex-col  items-start;
+    width: calc(91.35rem * var(--scale));
+    height: calc(53.9rem * var(--scale));
+
+    img {
+      @apply absolute right-10 -bottom-10;
+
+      width: calc(51rem * var(--scale));
+      right: calc(8rem * var(--scale));
+      bottom: calc(-5rem * var(--scale));
+    }
+  }
+}

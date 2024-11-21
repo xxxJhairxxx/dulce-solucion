@@ -1,0 +1,167 @@
+.cursor-pointer {
+  @apply overflow-visible;
+  @screen laptop {
+    @apply overflow-visible;
+  }
+}
+.Header {
+  @apply pl-[3rem] h-[6rem] !sticky  w-full bg-white border;
+  top: 0;
+  z-index: 500;
+  transition: background-color 0.5s ease;
+  &-fondoLogo {
+    @apply hidden;
+  }
+  @media screen(laptop) {
+    box-shadow: -3px 8px 23px -8px rgba(0, 0, 0, 0.59);
+    height: calc(8.9rem * var(--scale));
+    /* padding: calc(0rem * var(--scale)); */
+    @apply bg-white flex items-center;
+
+    &-fondoLogo {
+      @apply mx-auto absolute block;
+      z-index: 600;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(42rem * var(--scale));
+      top: calc(-4.1rem * var(--scale));
+      box-shadow: none;
+    }
+  }
+  &.background-white {
+    @apply bg-white text-success;
+
+    @screen laptop {
+      height: calc(50rem * var(--scale));
+    }
+
+    .Navbar-li {
+      @media screen(laptop) {
+        @apply text-black;
+        &::after,
+        &::before {
+          @apply bg-primary;
+        }
+        &:hover {
+          @apply text-primary;
+        }
+        &.isActive {
+          @apply text-primary;
+        }
+
+        &.contact {
+          @apply text-white;
+          @media screen(laptop) {
+            @apply bg-white font-normal   leading-none overflow-hidden relative items-center flex text-[1.5rem] gap-[.8rem];
+            padding: 0.8em 1.2em;
+            border-radius: 2px;
+            transition: background-color 0.5s ease, color 0.5s ease;
+
+            @media (hover: hover) {
+              &:hover {
+                @apply text-white bg-primary;
+              }
+            }
+            @media screen(laptop) {
+              font-size: calc(2rem * var(--scale));
+              line-height: calc(1.5rem * var(--scale));
+              padding: calc(2.2rem * var(--scale)) calc(3rem * var(--scale));
+            }
+            span {
+              @apply hidden;
+              @media screen(laptop) {
+                @apply block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.background-transparent {
+    @apply text-white;
+  }
+  &-ctn {
+    @apply relative w-full flex justify-between h-[6rem];
+    @media screen(laptop) {
+      @apply p-0 w-[78.2%] mx-auto h-full;
+      max-width: 147.6rem;
+    }
+
+    &-phone {
+      @apply flex gap-[0.5rem] absolute;
+      right: 8rem;
+      top: 1.2rem;
+      @media screen(laptop) {
+        @apply hidden;
+      }
+      &.isActive {
+        z-index: 10;
+        top: 2rem;
+        .switch-lang__selected {
+          @apply bg-white text-primary;
+        }
+        .socials__link {
+          @apply text-white text-[2.75rem];
+        }
+      }
+    }
+    .socials__link {
+      @apply text-[2.75rem] text-white;
+      transition: all 0.5s ease;
+      @screen laptop {
+        @apply hidden;
+      }
+    }
+
+    &-Logo {
+      @apply w-[11.6rem] h-[7.4rem] -bottom-[1.5rem];
+      z-index: 1;
+      @screen laptop {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(18rem * var(--scale));
+        z-index: 601;
+        right: calc(64rem * var(--scale));
+      }
+    }
+  }
+
+  &-menuIcon {
+    @apply absolute z-10;
+    right: 0;
+    @media screen(laptop) {
+      @apply hidden;
+    }
+  }
+
+  &-overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    @apply fixed inset-0 bg-black/40 pointer-events-none w-screen h-screen;
+    z-index: -1;
+    @media screen(laptop) {
+      @apply hidden;
+    }
+
+    &.isActive {
+      opacity: 1;
+      @apply pointer-events-auto;
+    }
+  }
+}
+
+.line-primary {
+  @screen laptop {
+    @apply w-full h-[.3rem] bg-primary absolute left-0 bottom-0 -z-10;
+  }
+}
+
+.isActive {
+  @apply !opacity-100;
+}
+.Navbar-li:hover {
+  @apply !opacity-100;
+}

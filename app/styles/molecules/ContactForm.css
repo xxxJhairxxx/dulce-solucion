@@ -1,0 +1,144 @@
+.contactFormCont {
+  @apply my-5;
+  &__InputArea {
+    @apply bg-[transparent] font-secundary text-gris-100 gap-5 flex flex-wrap justify-between;
+    @screen laptop {
+      gap-row: calc(0.1rem * var(--scale));
+    }
+    &__item {
+      @apply w-full grid  font-secundary;
+
+      @screen laptop {
+        @apply w-[48.5%] grid;
+        gap: calc(1rem * var(--scale));
+      }
+
+      label {
+        font-size: calc(1.8rem * var(--scale));
+      }
+      input {
+        @apply w-full bg-white border  text-gris-200 border-gris-100 rounded-lg;
+
+        height: 4.8rem;
+
+        padding-left: 1.6rem;
+        @media screen(laptop) {
+          height: calc(4.8rem * var(--scale));
+          font-size: calc(1.8rem * var(--scale));
+        }
+
+        &::-webkit-input-placeholder {
+          @apply text-gris-200;
+        }
+      }
+
+      select {
+        @apply border  text-gris-200 border-gris-100;
+        border-radius: 5px;
+        height: 4.1rem;
+        background: fffs;
+        appearance: none;
+        padding-left: 1.6rem;
+        width: 100%;
+        z-index: 5;
+        &::placeholder {
+          @apply text-gris-200;
+        }
+
+        @media screen(laptop) {
+          height: calc(4.8rem * var(--scale));
+          font-size: calc(1.8rem * var(--scale));
+        }
+        & option {
+          @apply not-italic cursor-pointer;
+          font-size: 100%;
+          font-size: calc(1.7rem * var(--scale));
+        }
+      }
+      .select-category {
+        @apply relative w-full;
+        @screen laptop {
+          font-size: calc(1.7rem * var(--scale));
+        }
+        z-index: 1;
+        &::before {
+          @apply text-gris-200;
+          content: "\e909";
+          font-family: "icomoon";
+          position: absolute;
+          right: calc(1.5rem * var(--scale));
+          font-size: calc(0.75rem * var(--scale));
+          top: calc(1.9rem * var(--scale));
+        }
+      }
+    }
+  }
+
+  &__TextArea {
+    @apply mt-2;
+
+    label {
+      font-size: calc(1.8rem * var(--scale));
+    }
+    textarea {
+      @apply border border-gris-100 font-secundary;
+      &::-webkit-input-placeholder {
+        @apply text-gris-200;
+      }
+      height: 14.2rem;
+
+      width: 100%;
+      border-radius: 5px;
+      padding: 1rem;
+      margin-top: 10px;
+      resize: none;
+      @media screen(laptop) {
+        height: calc(13.8rem * var(--scale));
+        padding-left: calc(1.6rem * var(--scale));
+        padding-top: calc(1rem * var(--scale));
+        font-size: calc(1.8rem * var(--scale));
+      }
+    }
+  }
+
+  .feedback-message {
+    color: #8fbc8f;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    margin-top: 5rem;
+    display: block;
+
+    &.failure {
+      color: #ff7490;
+    }
+    @screen laptop {
+      font-size: calc(1.9rem * var(--scale));
+    }
+  }
+
+  @screen laptop {
+    @apply mx-auto;
+  }
+}
+
+.Form-error {
+  @apply text-[1.2rem] text-red-500;
+}
+
+.ButtonArea {
+  @apply flex items-center;
+
+  button {
+    @apply mr-12 mt-2;
+
+    @screen laptop {
+      margin-top: calc(1.9rem * var(--scale));
+    }
+  }
+
+  @screen laptop {
+    padding: calc(10rem * var(--scale)) auto;
+  }
+}
